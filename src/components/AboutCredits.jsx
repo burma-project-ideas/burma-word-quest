@@ -6,6 +6,7 @@ export function SlangCredit() {
 
 export default function AboutCredits() {
   return <div className="about-credits">
+    <section><h3>Burma Word Quest</h3><p>English words, Myanmar slang, and Burmese proverb challenges.</p><a href="https://github.com/burma-project-ideas/burma-word-quest" target="_blank" rel="noreferrer">Source code · Burma Project Ideas ↗</a></section>
     <section><h3>Original creator & inspiration</h3><p>ဒီ game ဟာ <strong>Jeff307-kib (Sai Wanna Tun)</strong> ရဲ့ <strong>Assembly: End-Game</strong> ကို အခြေခံပြီး စိတ်ကူးရယူ ဖန်တီးထားပါတယ်။</p><p>မူရင်း game မှာ စာလုံးတစ်လုံးချင်း ခန့်မှန်းပြီး programming languages များကို ကယ်တင်ရပါတယ်။</p><a href="https://github.com/Jeff307-kib/End-Game" target="_blank" rel="noreferrer">Original repository · Jeff307-kib/End-Game ↗</a></section>
     <section><h3>Additional development</h3><p><strong>Sann Lynn Htun</strong> က ဒီ version အတွက် ထပ်မံဖြည့်စွက် ပြင်ဆင်ထားပါတယ်။</p><p>မြန်မာ Slang နဲ့ စကားပုံ modes၊ မြန်မာလို clues၊ difficulty နဲ့ categories၊ mobile layout၊ Google sign-in၊ timed leaderboard၊ feedback နဲ့ PWA support တို့ ပါဝင်ပါတယ်။</p></section>
     <section><h3>Myanmar slang source</h3><SlangCredit /></section>

@@ -7,11 +7,11 @@ export default defineConfig({
   plugins: [react(), VitePWA({
     registerType: 'autoUpdate',
     injectRegister: 'auto',
-    includeAssets: ['icons/*.png', 'fonts/noto-sans-myanmar-OFL.txt'],
+    includeAssets: ['brand.svg', 'icons/*.png', 'fonts/noto-sans-myanmar-OFL.txt'],
     manifest: {
       id: '/',
-      name: 'Assembly: Endgame',
-      short_name: 'Endgame',
+      name: 'Burma Word Quest',
+      short_name: 'Word Quest',
       description: 'English words, Myanmar slang and Myanmar proverb games.',
       lang: 'my',
       start_url: '/',

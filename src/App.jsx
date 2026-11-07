@@ -81,7 +81,7 @@ function readStats() {
     return [id, { streak: count('streak'), best: count('best'), wins: count('wins') }]
   }))
 }
-export default function AssemblyEndgame() {
+export default function BurmaWordQuest() {
   const { locale, setLocale, t } = useLocale()
   useButtonShortcuts()
   const [googleSetup, setGoogleSetup] = useState(false)
@@ -299,7 +299,7 @@ export default function AssemblyEndgame() {
 
   return <main className={`arcade-shell ${screen !== 'game' ? 'landing-shell' : 'viewport-game'}${over ? ' round-finished' : ''}`}>
     <header className="topbar">
-      <a className="brand" href="/" aria-label="Home · Choose game" onClick={event => { if (event.button === 0 && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) { event.preventDefault(); window.history.pushState({}, '', '/'); leaderboardReturn.current = 'landing'; setSetupMode(null); setScreen('landing') } }}><span className="brand-mark">A_</span><span>ASSEMBLY<span className="brand-sub">ENDGAME / WORD RESCUE</span></span></a>
+      <a className="brand" href="/" aria-label="Burma Word Quest · Home" onClick={event => { if (event.button === 0 && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) { event.preventDefault(); window.history.pushState({}, '', '/'); leaderboardReturn.current = 'landing'; setSetupMode(null); setScreen('landing') } }}><img className="brand-mark" src="/brand.svg" width="44" height="44" alt="" /><span>BURMA<span className="brand-sub">WORD QUEST</span></span></a>
       <div className="header-controls">
         <button className="header-locale" type="button" aria-label={t('Switch to Myanmar', 'Switch to English')} title={t('Switch to Myanmar', 'အင်္ဂလိပ်လို ပြောင်းမယ်')} onClick={() => setLocale(locale === 'en' ? 'my' : 'en')}><span lang="en" className={locale === 'en' ? 'locale-active' : ''}>EN</span><span aria-hidden="true">/</span><span lang="my" className={locale === 'my' ? 'locale-active' : ''}>MM</span></button>
         <ShortcutHelp />
@@ -310,7 +310,7 @@ export default function AssemblyEndgame() {
       </div>
     </header>
     {screen === 'myanmar-game' ? authReady ? <MyanmarChallenge t={t} key={statsKey} mode={statsKey} userId={session?.user.id || null} blocked={Boolean(panel)} onExit={() => { setSetupMode(null); setScreen('landing') }} saveResult={saveChallengeResult} cloudMessage={cloudMessage} pendingCloud={pendingCloud} retryCloud={retryCloud} /> : <p role="status">ပွဲကို ပြင်ဆင်နေပါတယ်…</p> : screen === 'profile' ? <PlayerProfile key={profileId} playerId={profileId} userId={session?.user.id} onBack={closePage} headingRef={screenTitle} /> : screen === 'leaderboard' ? <LeaderboardPage initialMode={statsKey} userId={session?.user.id} onBack={closePage} headingRef={screenTitle} onProfile={id => openPage(`players/${id}`)} /> : screen === 'about' ? <section className="about-page" aria-labelledby="about-title"><button className="setup-back" onClick={closePage}>{t("← Back", "← နောက်သို့")}</button><h1 id="about-title" ref={screenTitle} tabIndex={-1}>About & Credits</h1><AboutCredits /></section> : screen === 'landing' ? <section className="landing-page" aria-labelledby="landing-title">
-      <div className="landing-intro"><span className="eyebrow">ASSEMBLY / WORD RESCUE</span><h1 id="landing-title" ref={screenTitle} tabIndex={-1}>{t("What will you play today?", "ဒီနေ့ ဘာကစားမလဲ?")}</h1><p>{t("Choose the mode you want to play and start.", "ကစားချင်တဲ့ mode ကို ရွေးပြီး စတင်လိုက်ပါ။")}</p><p className="start-shortcuts-help"><kbd>1</kbd> English · <kbd>2</kbd> Slang · <kbd>3</kbd> စကားပုံ <span>{t("You can also move with Tab and select with Enter.", "Tab နဲ့ ရွှေ့ပြီး Enter နဲ့လည်း ရွေးနိုင်ပါတယ်။")}</span></p></div>
+      <div className="landing-intro"><span className="eyebrow">BURMA WORD QUEST</span><h1 id="landing-title" ref={screenTitle} tabIndex={-1}>{t("What will you play today?", "ဒီနေ့ ဘာကစားမလဲ?")}</h1><p>{t("Discover English words, Myanmar slang, and the wisdom in Burmese proverbs.", "ကစားချင်တဲ့ mode ကို ရွေးပြီး စတင်လိုက်ပါ။")}</p><p className="start-shortcuts-help"><kbd>1</kbd> English · <kbd>2</kbd> Slang · <kbd>3</kbd> စကားပုံ <span>{t("You can also move with Tab and select with Enter.", "Tab နဲ့ ရွှေ့ပြီး Enter နဲ့လည်း ရွေးနိုင်ပါတယ်။")}</span></p></div>
       <div className="challenge-resume-links">{[['slang', t("Myanmar Slang", "မြန်မာ Slang")], ['proverb-choice', 'စကားပုံ · ရွေးဖြေ'], ['proverb-input', 'စကားပုံ · ရိုက်ဖြေ']].filter(([id]) => { const saved = readStored(`assembly-challenge-v1:${id}`); return saved.id && saved.phase !== 'finished' && saved.userId === (session?.user.id || null) }).map(([id, label]) => <button key={id} data-shortcut={String(4 + ['slang', 'proverb-choice', 'proverb-input'].indexOf(id))} onClick={() => newGame(category, difficulty, id === 'slang' ? 'slang' : 'proverb', id === 'proverb-input' ? 'input' : 'choice')}>{label} · ပြန်ဆက်မယ် →</button>)}</div>
       <div className="game-mode-cards" aria-label="Game mode">
         {[
@@ -330,7 +330,7 @@ export default function AssemblyEndgame() {
         {setupMode === 'proverb' && <p className="proverb-credit">{proverbCredit}</p>}
         {setupMode === 'slang' && <SlangCredit />}
       </form>
-    </section> : <section className={`game-board ${isMyanmar ? 'myanmar-board' : 'english-board'}`} aria-label="Word rescue game">
+    </section> : <section className={`game-board ${isMyanmar ? 'myanmar-board' : 'english-board'}`} aria-label="Burma Word Quest game">
       <div className="board-top"><span className="eyebrow">{isProverb ? `စကားပုံ · ${proverbPlay === 'choice' ? 'ရွေးဖြေ' : 'ရိုက်ဖြေ'}` : isSlang ? 'MYANMAR SLANG' : `${activeCategory.label} · ${activeDifficulty.name}`}</span><span className="round-timer" aria-label="ပွဲကစားချိန်">အချိန် {formatTime(elapsedMs)}</span><span className="compact-stats">Streak {record.streak} · Best {record.best}</span></div>
       <div className="life-heading"><span>ကျန်တဲ့ မှားခွင့်</span><strong className={remainingLives <= (isMyanmar ? 1 : 2) ? 'danger' : ''}>{remainingLives}<span> / {maxLives}</span></strong></div>
       <Lives remaining={remainingLives} total={maxLives} label={`မှားခွင့် ${remainingLives} ကြိမ်ကျန်`} />
