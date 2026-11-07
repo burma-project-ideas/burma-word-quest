@@ -1,4 +1,4 @@
-/* Midnight Arcade: shared surfaces and compact, readable mobile controls. */
+/* Burma Word Quest: navy surfaces, mint actions, and readable word challenges. */
 :root {
   --mint: #a9f06a;
   --lavender: #c2b6f6;
@@ -16,14 +16,16 @@ button[aria-pressed=true] { background: #253b2b; }
 .next-game:hover:not(:disabled) { background: #c0fa8d; }
 .arcade-shell { max-width: 1100px; }
 .topbar { border-bottom-color: var(--line); }
-.brand { letter-spacing: 1.5px; }
-.brand-mark { border-radius: 6px; font-family: system-ui,sans-serif; font-weight: 800; }
+.brand { letter-spacing: .04em; font-family: system-ui, sans-serif; font-size: 17px; }
+.brand-sub { font-family: system-ui, sans-serif; font-size: 10px; letter-spacing: .16em; color: var(--mint); }
+.brand-mark { display: block; width: 44px; height: 44px; padding: 0; border-radius: 10px; background: transparent; flex-shrink: 0; }
 .header-icon, .header-sound { color: #c0bddb; }
 .header-icon[aria-current=page] { color: var(--mint); }
 .header-account:not(.signed-in) { background: var(--surface); border-color: var(--line); }
-.landing-intro { margin-bottom: 28px; }
+.landing-intro { margin-bottom: 28px; padding: 24px 0; border-bottom: 1px solid var(--line); }
 .landing-intro .eyebrow { color: var(--lavender); letter-spacing: 2px; }
-.landing-intro h1 { color: #f0f4fc; }
+.landing-intro h1 { color: #f0f4fc; letter-spacing: -.02em; }
+:root:lang(en) .landing-intro h1 { font-family: system-ui, sans-serif; font-weight: 750; }
 .landing-intro p { color: #b8c2d8; }
 .game-mode-cards { gap: 16px; }
 .game-mode-card {
@@ -35,12 +37,12 @@ button[aria-pressed=true] { background: #253b2b; }
   align-items: stretch;
   padding: 24px;
   gap: 20px;
-  border-radius: 18px;
+  border-radius: 14px;
   border-color: var(--line);
-  background: linear-gradient(145deg,#192635,#111b29);
+  background: var(--surface);
   box-shadow: 0 6px 18px #0002;
 }
-.game-mode-card:hover:not(:disabled) { border-color: #8077aa; background: #1b293b; }
+.game-mode-card:hover:not(:disabled) { border-color: var(--mint); background: var(--surface-raised); }
 .mode-card-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; flex: 1; }
 .game-mode-card .mode-card-copy strong { font-size: 22px; line-height: 1.8; }
 .mode-card-description { color: #c1cbe0; font-size: 15px; line-height: 2; }
@@ -92,7 +94,7 @@ button[aria-pressed=true] { background: #253b2b; }
 .account-actions { border-color: #5c5278; }
 .about-credits h3 { color: #d4c9f5; }
 @media(min-width:641px) {
-  .game-mode-card { min-height: 340px; }
+  .game-mode-card { min-height: 310px; }
   .english-board .puzzle-space { padding: 12px; border-radius: 14px; background: #142030; }
 }
 @media(max-width:640px) {
@@ -231,3 +233,22 @@ button[aria-pressed=true] { background: #253b2b; }
 .header-locale { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding: 6px 8px; font-size: 12px; white-space: nowrap; }
 .header-locale .locale-active { color: var(--mint); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
 @media (max-width: 640px) { .header-controls { flex-wrap: wrap; justify-content: flex-end; } .topbar { flex-wrap: wrap; } }
+
+/* Shared treatment reaches game, account, leaderboard, and profile states. */
+.game-setup, .app-panel, .game-board, .result-summary { border-radius: 14px; }
+.game-setup { border-top: 3px solid var(--mint); }
+.panel-heading { background: #111b29; }
+.app-panel::backdrop { background: #040a12d9; }
+input, select { border-color: #4a6078; background: #0f1926; }
+input:focus-visible, select:focus-visible { outline: 3px solid var(--mint); outline-offset: 3px; }
+.about-credits section { padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.about-credits section + section { padding-top: 20px; }
+.profile-summary, .leaderboard-totals > div { border-radius: 14px; }
+@media (max-width: 640px) {
+  .topbar .brand { font-size: 14px; }
+  .topbar .brand-mark { width: 38px; height: 38px; padding: 0; }
+  .topbar .brand-sub { display: block; font-size: 8px; }
+  .landing-intro { padding: 12px 0 20px; }
+  .about-credits section { padding: 16px; }
+}
+@media (max-height: 420px) { .topbar .brand-mark { display: none; } }
