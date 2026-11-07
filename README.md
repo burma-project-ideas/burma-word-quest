@@ -1,60 +1,112 @@
-# Assembly Endgame / Word Rescue
+# Burma Word Quest
 
-React + Vite word game with English words, Myanmar slang, and Myanmar proverbs. Proverbs support multiple choice and typed answers with the first half visible from the start.
+A word challenge game featuring English vocabulary, Myanmar slang, and Burmese proverbs. Built with React, Vite, and Supabase, with an installable PWA and offline guest play after caching.
 
-## Run
+[Repository](https://github.com/burma-project-ideas/burma-word-quest) · [Live app](https://swnt-end-game.vercel.app/)
+
+The existing live domain was publicly accessible on 7 November 2026. It is retained to preserve browser progress and authentication redirects.
+
+## Playing
+
+Choose a mode, review its rules, and start. No account is required for local play. The interface defaults to Myanmar and remembers the English/Myanmar selection. Translation is partial: clues, explanations, some controls, and source content remain Burmese.
+
+| Mode | Input | Rules and output |
+| --- | --- | --- |
+| English Words | Guess letters on screen or using a physical keyboard | 240 words across four categories and three difficulties; eight lives and one free hint per round. Reveals answers and meanings; tracks local wins and streaks. |
+| Myanmar Slang | Type the Burmese slang word described by its meaning | A shuffled, non-repeating deck of 20 entries with three shared lives. |
+| Proverbs: choice | Choose the missing second half | 869 playable proverbs with the first half visible. |
+| Proverbs: input | Type the missing second half | The same proverb dataset with a separate run and ranking. |
+
+In Myanmar challenges, each wrong answer or skip consumes a life and reveals the answer. Correct answers preserve lives. Runs end on deck completion, life exhaustion, or explicit Stop. Checkpoints let players pause and resume in the same browser. Only active answer time counts; reading explanations, pauses, background tabs, and account dialogs are excluded. English rounds use wall-clock round timing, including time in other panels or background tabs.
+
+Open the `?` help dialog for keyboard shortcuts. On the home screen, `1`, `2`, and `3` choose modes; Tab and Enter navigate and activate controls. Typed Myanmar answers require a Myanmar keyboard.
+
+## Accounts and saved results
+
+The app implements nickname-only anonymous accounts, email/password accounts, and Google sign-in. Availability depends on Supabase provider settings. Earlier setup notes record Google enabled and anonymous sign-ins/manual identity linking disabled; this rebrand does not change those administrative settings.
+
+Signed-in results enter a UUID-based retry outbox. Challenge progress can publish while paused; final results are immutable. Each player's best challenge run ranks by correct count descending, then active time ascending. English rankings retain wins/time/streak ordering. Results belong to the identity captured at run start; guest history is not automatically uploaded.
+
+`/leaderboard` shows rankings. `/players/<player UUID>` is a shareable public profile with a 365-day correct-answer chart grouped by Myanmar date. Public profile RPCs return IDs, display names, and aggregate activity without email or authentication metadata. Feedback requires an authenticated player and allows one submission per Myanmar calendar day.
+
+## Local setup
+
+Use a current Node.js LTS release with npm. Node.js 24 was used for verification.
 
 ```sh
-npm install
+npm ci
 npm run dev
 ```
 
-`npm run lint` and `npm run build` validate the project.
+The frontend includes the existing Supabase URL and a browser-safe publishable key. For your own backend, create an untracked `.env.local`:
 
-## Layout
+```dotenv
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=your-publishable-key
+```
 
-The game fits one viewport, including the result and next-round action. Settings, account, meanings, and leaderboard open in accessible modal panels. Long panel contents can scroll independently so text remains readable. Software keyboard viewport changes keep the typed-answer form visible.
+Never put service-role keys, database passwords, or OAuth secrets in `VITE_` variables. Configure row-level security and RPCs before using online features. Update the Supabase hostname allowed by the CSP in `vercel.json` when using another backend.
 
-## Accounts and leaderboard
+See [Supabase setup](supabase/README.md) and [Google setup](supabase/GOOGLE_SETUP.md). For a new database, review and apply every file in `supabase/migrations/` in filename order, from `202610140001_game_leaderboard.sql` through `202610170008_legacy_result_execute_permissions.sql`. They cover rankings, feedback, timing, challenges, paused snapshots, activity, submission limits, and legacy RPC permissions. Do not reset an existing production database. Configure provider credentials and the actual site/redirect URLs in the provider dashboards.
 
-Players can join the leaderboard with just a nickname using Supabase anonymous Auth. Email/password accounts are optional; unregistered guests can still play immediately. Signed-in players' new rounds are saved with retry-safe UUIDs. Rankings are separated by English difficulty, slang, and the two proverb play modes.
+## Structure
 
-Run the database migration and configure Auth as described in [Supabase setup](supabase/README.md). The supplied publishable browser key cannot create database tables or change Auth settings.
+| Path | Purpose |
+| --- | --- |
+| `src/App.jsx` | Navigation, English game, setup, and account panels |
+| `src/components/MyanmarChallenge.jsx` | Slang and proverb challenge screens |
+| `src/challenge.js`, `src/challengeOutbox.js` | Challenge transitions, checkpoint validation, and queued snapshots |
+| `src/gameData.js`, `src/slangData.js`, `src/proverbs.json` | Vocabulary, clues, and proverb data |
+| `src/useGameAccount.js`, `src/supabase.js` | Authentication, result retries, and backend client |
+| `src/components/LeaderboardPage.jsx`, `src/components/PlayerProfile.jsx` | Rankings and public activity |
+| `src/index.css`, `src/mobile.css`, `src/theme.css` | Layout, mobile behavior, and navy/mint styling |
+| `public/` | Brand artwork, fonts, PWA icons, legal pages, and social preview |
+| `scripts/` | Tests and artwork generation |
+| `supabase/` | Migrations, SQL tests, and provider setup |
 
-Rankings are casual and client-reported. See the setup document for the security scope and production configuration.
+## Checks and build
 
-## Production
+```sh
+node --test scripts/*.test.mjs
+npm run lint
+npm run build
+npm run preview
+```
 
-https://swnt-end-game.vercel.app/
+The build emits `dist/`, a PWA manifest, and a service worker. Regenerate the logo, install icons, and social preview with `npm run generate:pwa-icons` after editing `public/brand.svg` or the artwork script. Editing inline JSON-LD in `index.html` requires updating its SHA-256 hash in `vercel.json`; the security-header test checks this.
 
-## Credits
+SQL checks in `supabase/tests/` require a configured database. Review fixture and rollback behavior before running them. Frontend tests do not establish that production migrations or provider settings are correct.
 
-Original creator and inspiration: **Jeff307-kib (Sai Wanna Tun)** and [Assembly: End-Game](https://github.com/Jeff307-kib/End-Game).
+## Deployment
 
-Additional development and adaptations: **Sann Lynn Htun**, including Myanmar Slang and proverb modes, Burmese clues, categories and difficulty options, mobile layout, Google sign-in, timed leaderboard, feedback, and PWA support.
+Connect the destination repository to Vercel using `npm run build` and output directory `dist`. The configuration supplies security headers and direct-entry rewrites for `/leaderboard`, `/about`, and `/players/:id`. Other hosts need equivalent routing while serving real assets, `/privacy.html`, and `/terms.html` directly. HTTPS is required for deployed PWA installation and service workers.
 
-Myanmar slang source: [Ban Sagar (ဗန်းစကား)](https://bansagar.com/). Clues are rewritten for the game.
+Retain `https://swnt-end-game.vercel.app/` unless a replacement is deliberately configured. Browser storage does not follow a domain change. When changing domains, update canonical/social URLs, legal-page links, Supabase Site URL/redirects, Google OAuth origins, and catalogs together.
 
-မြန်မာစကားပုံများကို ဆရာ ဒေါက်တာ ၀င်းသိန်း Website မှ ယူသုံးထားတာဖြစ်ပါတယ်
+After transfer, verify the Vercel GitHub App can access the organization repository and the existing Vercel project is linked to it. Preserve environment variables and domains. Vercel administrative access requires an authenticated connection; a local build alone does not verify automatic deployment.
 
-Mobile font: Noto Sans Myanmar; license included at `public/fonts/noto-sans-myanmar-OFL.txt`.
+## Design and compatibility
 
-## Full-dataset Myanmar challenges
+The app uses navy surfaces, mint actions, a speech-tile wordmark, consistent panel borders, and responsive challenge cards. Styling is app-specific CSS reusing existing components and Radix icons. No external UI template or dependency was added.
 
-Myanmar Proverbs (869 unique playable items) and Slang (20 current entries) each use one shuffled, non-repeating deck per run. Proverb choice and input have separate runs and leaderboards. The whole run shares three lives; each wrong answer or skip consumes one life and reveals that question's answer. Correct answers preserve lives. The run ends on deck completion, life exhaustion, or explicit Stop.
+Myanmar rendering, focus indicators, keyboard shortcuts, dialogs, and reduced-motion CSS are retained. There is one dark theme. Original `assembly-*` storage keys and PWA app ID `/` remain stable to preserve progress and preferences on the same origin.
 
-Only active question time counts. Answer reading, manual Pause, background tabs, account dialogs, and time away from the game are excluded. Local checkpoints restore paused in the same browser; the landing screen offers Resume. Signed-in identity is captured at run start. A result is queued once by its run UUID when finished, with retries preserved in the existing outbox.
+## Limitations
 
-Apply `supabase/migrations/202610160004_challenge_runs.sql` before deploying this version. The dedicated table/RPCs preserve legacy single-question results. Each player's best run is ranked by correct count descending, then total active time ascending. SQL writes validate totals, counters, terminal status, and ownership; scores remain client reported. The migration's dataset totals must change alongside future dataset updates.
+- Rankings are casual and client-reported, unsuitable for trusted competition or prizes.
+- Accounts, feedback, rankings, and cloud saves require network access. Offline play requires an initial successful visit and completed caching.
+- Clearing browser storage removes local checkpoints, guest history, and unsent results. Another device or origin does not share them.
+- Translation is incomplete; source datasets may need editorial corrections. Dataset total changes require matching database validation updates.
+- The build currently triggers Vite's chunk-size warning.
+- The inherited dependency installation reports nine audit findings (three low, six moderate); dependency upgrades are outside this rebrand.
 
-Validation: `node --test scripts/challenge.test.mjs`, `npm run lint`, `npm run build`. Run `supabase/tests/challenge_runs.sql` in the SQL editor to test ranking, retries, and permissions with rolled-back fixtures.
+## Credits and source terms
 
-Paused runs also publish their current correct count and cumulative active time to the leaderboard. Migration `202610160005_paused_challenge_scores.sql` permits monotonic updates to the same run UUID while paused; final results are immutable. Old or reordered paused snapshots cannot reduce counters/time or reopen a finalized run. The outbox replaces pending snapshots for the same run and acknowledges only the matching queue entry. Signed-in players can see save/retry status in the pause panel.
+- Original creator and inspiration: **Sai Wanna Tun**, historically credited as **Jeff307-kib**, now [SaiWunnaTun-KP/End-Game](https://github.com/SaiWunnaTun-KP/End-Game). The original project is **Assembly: End-Game**; its Git history and fork relationship are retained.
+- Additional development and adaptations: **[Sann Lynn Htun](https://github.com/sannlynnhtun-coding)**, including Myanmar modes, Burmese clues, categories/difficulty, mobile layout, Google sign-in, timed rankings, feedback, PWA support, and Burma Word Quest.
+- Myanmar slang: **[Ban Sagar (ဗန်းစကား)](https://bansagar.com/)**; clues were rewritten for the game.
+- Myanmar proverbs: **Dr. Win Thein's website**, as credited in the original dataset; the organization's [Myanmar Proverbs source credits](https://github.com/burma-project-ideas/myanmar-proverbs#readme) provide further context.
+- Mobile reading font: **Noto Sans Myanmar**, with its [SIL Open Font License](public/fonts/noto-sans-myanmar-OFL.txt).
+- Existing YoeShin and Octagon fonts are retained from the source repository; redistribution notices were not found in this checkout.
 
-## Public player profiles
-
-Open your profile from the avatar menu or another player's profile from their leaderboard name. `/players/<player UUID>` is shareable. The 365-day chart uses the existing navy/mint theme and displays saved correct answers, grouped by Myanmar calendar date. It is a game-activity chart; no GitHub account connection is required. The chart scrolls horizontally on mobile and provides a readable daily-totals list.
-
-Apply migration `202610160006_player_activity.sql` before deployment. Activity triggers count only newly added correct answers when a paused challenge is updated. Historical scores are backfilled to their original saved date, since historical per-answer timestamps were not recorded. Public profile RPC output contains only player ID, display name, aggregate correct counts and daily counts, without email or authentication metadata. Existing theme color remains `#090f18` in `index.html` and the PWA manifest.
-
-Tests: `node --test scripts/activity.test.mjs scripts/challenge.test.mjs` and `supabase/tests/player_activity.sql` (fixtures roll back).
+No repository-wide license was found in this project or upstream at the time of the rebrand. Attribution and public source availability do not establish permission to redistribute all code, datasets, or fonts. Confirm source terms before reuse; this change does not assign a license to inherited material.
