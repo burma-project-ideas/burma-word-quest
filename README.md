@@ -94,7 +94,7 @@ Myanmar rendering, focus indicators, keyboard shortcuts, dialogs, and reduced-mo
 ## Limitations
 
 - Rankings are casual and client-reported, unsuitable for trusted competition or prizes.
-- Accounts, feedback, rankings, and cloud saves require network access. Offline play requires an initial successful visit and completed caching.
+- Accounts, feedback, rankings, and cloud saves require network access. During verification on 7 November 2026, the configured Supabase hostname did not resolve from the test environment and the live leaderboard displayed its connection-error state. Sign-in and cloud writes remain unverified. Offline play requires an initial successful visit and completed caching.
 - Clearing browser storage removes local checkpoints, guest history, and unsent results. Another device or origin does not share them.
 - Translation is incomplete; source datasets may need editorial corrections. Dataset total changes require matching database validation updates.
 - The build currently triggers Vite's chunk-size warning.
