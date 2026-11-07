@@ -2,9 +2,9 @@
 
 A word challenge game featuring English vocabulary, Myanmar slang, and Burmese proverbs. Built with React, Vite, and Supabase, with an installable PWA and offline guest play after caching.
 
-[Repository](https://github.com/burma-project-ideas/burma-word-quest) · [Live app](https://swnt-end-game.vercel.app/)
+[Repository](https://github.com/burma-project-ideas/burma-word-quest) · [Live app](https://burma-word-quest.vercel.app/)
 
-The existing live domain was publicly accessible on 7 November 2026. It is retained to preserve browser progress and authentication redirects.
+The new live domain was publicly accessible on 7 November 2026. The former `swnt-end-game.vercel.app` address permanently redirects to this domain, preserving paths and query strings. Browser-local progress and sessions remain on the original origin and do not transfer automatically.
 
 ## Playing
 
@@ -81,7 +81,7 @@ SQL checks in `supabase/tests/` require a configured database. Review fixture an
 
 Connect the destination repository to Vercel using `npm run build` and output directory `dist`. The configuration supplies security headers and direct-entry rewrites for `/leaderboard`, `/about`, and `/players/:id`. Other hosts need equivalent routing while serving real assets, `/privacy.html`, and `/terms.html` directly. HTTPS is required for deployed PWA installation and service workers.
 
-Retain `https://swnt-end-game.vercel.app/` unless a replacement is deliberately configured. Browser storage does not follow a domain change. When changing domains, update canonical/social URLs, legal-page links, Supabase Site URL/redirects, Google OAuth origins, and catalogs together.
+The production domain is `https://burma-word-quest.vercel.app/`; the former `https://swnt-end-game.vercel.app/` redirects to it. Browser storage does not follow a domain change. Canonical/social URLs, legal pages, and catalog links use the new domain. Supabase Site URL/redirect allowlists and Google OAuth origins/branding must also be updated in their dashboards; those provider settings were not changed during this domain update.
 
 After transfer, verify the Vercel GitHub App can access the organization repository and the existing Vercel project is linked to it. Preserve environment variables and domains. Vercel administrative access requires an authenticated connection; a local build alone does not verify automatic deployment.
 

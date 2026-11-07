@@ -4,10 +4,14 @@ The game supports nickname-only players through Supabase anonymous Auth, plus op
 
 1. Make sure `muiwhmmcpghkazvrmafl` is active in Supabase.
 2. Run `supabase/migrations/202610140001_game_leaderboard.sql` in its SQL Editor.
-3. Enable Anonymous Sign-Ins under Authentication / Sign In / Providers for nickname-only play. Enable Email sign-up for optional accounts. Set Site URL to `https://swnt-end-game.vercel.app` and add this URL to allowed redirects. Keep email verification enabled and configure production email delivery if needed.
+3. Enable Anonymous Sign-Ins under Authentication / Sign In / Providers for nickname-only play. Enable Email sign-up for optional accounts. Set Site URL to `https://burma-word-quest.vercel.app` and add this URL to allowed redirects. Keep email verification enabled and configure production email delivery if needed.
 4. Open နာမည်ထည့်မယ်, enter a 2–30 character nickname, and start playing. This creates a persistent anonymous Auth identity and starts a new tracked round. Alternatively, choose email account login. Nicknames do not let a different device resume the same anonymous identity.
 
 The supplied publishable key and project URL are browser-safe configuration. Optionally override them with `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`. Never put a database password, service-role key, or secret key into a VITE variable.
+
+## Domain update — 7 November 2026
+
+The app now uses `https://burma-word-quest.vercel.app/`; the old domain redirects there. Update the Supabase Site URL and allowed redirect URLs to the new domain, including `/?login=google`. These administrative provider settings were not changed or verified as part of the domain update.
 
 ## Database access
 
