@@ -1,8 +1,10 @@
+import useLocale from '../useLocale'
 import { useEffect, useState } from 'react'
 import { supabase, onlineError } from '../supabase'
 import { retryDelaySeconds } from '../onlineError'
 
 export default function Account({ session, onPlayerReady, confirmGoogleName = false }) {
+  const { ui } = useLocale()
   const [guest, setGuest] = useState(true)
   const [signup, setSignup] = useState(false)
   const [busy, setBusy] = useState(false)
@@ -16,7 +18,7 @@ export default function Account({ session, onPlayerReady, confirmGoogleName = fa
       setRetrySeconds(remaining)
       if (!remaining) {
         setRetryUntil(0)
-        setNotice('ပြန်စမ်းနိုင်ပါပြီ။ / You can try again now.')
+        setNotice('ပြန်စမ်းနိုင်ပါပြီ။')
       }
     }
     const timer = setInterval(tick, 250)
@@ -81,22 +83,23 @@ export default function Account({ session, onPlayerReady, confirmGoogleName = fa
     } catch (error) { setNotice(onlineError(error)); setBusy(false) }
   }
   return <div className="account-content">
-    <p>{session ? 'နာမည်ကို ပြောင်းသိမ်းနိုင်ပါတယ်။ နိုင်ပွဲနဲ့ အကောင်းဆုံး streak ကို mode အလိုက် leaderboard မှာ သိမ်းပေးပါမယ်။' : guest ? 'နာမည်တစ်ခုပဲ ထည့်ပြီး စကစားပါ။ Email နဲ့ password မလိုပါဘူး။ သင့်နိုင်ပွဲတွေကို leaderboard မှာ သိမ်းပေးပါမယ်။' : 'Account နဲ့ ဝင်ပြီး စက်မတူလည်း သင့်ရလဒ်တွေကို ဆက်သုံးနိုင်ပါတယ်။'}</p>
-    {!session && guest && <p className="ranking-note">ဒီ browser မှာ ကစားသူကို မှတ်ထားပါမယ်။ နာမည်တစ်ခုတည်းနဲ့ အခြားစက်ကနေ အကောင့်ပြန်ဝင်လို့ မရပါဘူး။</p>}
-    {(!session || session.user.is_anonymous) && <><button type="button" className="google-login" onClick={googleLogin} disabled={busy}>Continue with Google</button><p className="auth-divider">သို့မဟုတ်</p></>}
-    {confirmGoogleName && <p>Leaderboard မှာ ပြမယ့်နာမည်ကို အတည်ပြုပြီး ပွဲအသစ်စပါ။</p>}
+    <p>{ui(session ? 'နာမည်ကို ပြောင်းသိမ်းနိုင်ပါတယ်။ နိုင်ပွဲနဲ့ အကောင်းဆုံး streak ကို mode အလိုက် leaderboard မှာ သိမ်းပေးပါမယ်။' : guest ? 'နာမည်တစ်ခုပဲ ထည့်ပြီး စကစားပါ။ Email နဲ့ password မလိုပါဘူး။ သင့်နိုင်ပွဲတွေကို leaderboard မှာ သိမ်းပေးပါမယ်။' : 'Account နဲ့ ဝင်ပြီး စက်မတူလည်း သင့်ရလဒ်တွေကို ဆက်သုံးနိုင်ပါတယ်။')}</p>
+    {!session && guest && <p className="ranking-note">{ui("ဒီ browser မှာ ကစားသူကို မှတ်ထားပါမယ်။ နာမည်တစ်ခုတည်းနဲ့ အခြားစက်ကနေ အကောင့်ပြန်ဝင်လို့ မရပါဘူး။")}</p>}
+    {(!session || session.user.is_anonymous) && <><button type="button" className="google-login" onClick={googleLogin} disabled={busy}>{ui("Continue with Google")}</button><p className="auth-divider">{ui("သို့မဟုတ်")}</p></>}
+    {confirmGoogleName && <p>{ui("Leaderboard မှာ ပြမယ့်နာမည်ကို အတည်ပြုပြီး ပွဲအသစ်စပါ။")}</p>}
     <form onSubmit={submit}>
-      {(session || signup || guest) && <label>ကစားသူနာမည်<input value={name} onChange={e => setName(e.target.value)} minLength={2} maxLength={30} required autoComplete="nickname" disabled={busy} /></label>}
-      {!session && !guest && <><label>Email<input type="email" required autoComplete="email" value={email} onChange={e => setEmail(e.target.value)} disabled={busy} /></label><label>Password<input type="password" minLength={8} required autoComplete={signup ? 'new-password' : 'current-password'} value={password} onChange={e => setPassword(e.target.value)} disabled={busy} /></label></>}
-      <button className="next-game" disabled={busy || retrySeconds > 0}>{retrySeconds > 0 ? `${retrySeconds}s · ခဏစောင့်ပါ…` : busy ? 'ခဏစောင့်ပါ…' : session ? confirmGoogleName ? 'နာမည်နဲ့ စကစားမယ်' : 'နာမည် သိမ်းမယ်' : guest ? 'နာမည်နဲ့ စကစားမယ်' : signup ? 'Account ဖန်တီးမယ်' : 'ဝင်မယ်'}</button>
+      {(session || signup || guest) && <label>{ui("ကစားသူနာမည်")}<input value={name} onChange={e => setName(e.target.value)} minLength={2} maxLength={30} required autoComplete="nickname" disabled={busy} /></label>}
+      {!session && !guest && <><label>{ui("Email")}<input type="email" required autoComplete="email" value={email} onChange={e => setEmail(e.target.value)} disabled={busy} /></label><label>{ui("Password")}<input type="password" minLength={8} required autoComplete={signup ? 'new-password' : 'current-password'} value={password} onChange={e => setPassword(e.target.value)} disabled={busy} /></label></>}
+      <button className="next-game" disabled={busy || retrySeconds > 0}>{ui(retrySeconds > 0 ? `${retrySeconds}s · ခဏစောင့်ပါ…` : busy ? 'ခဏစောင့်ပါ…' : session ? confirmGoogleName ? 'နာမည်နဲ့ စကစားမယ်' : 'နာမည် သိမ်းမယ်' : guest ? 'နာမည်နဲ့ စကစားမယ်' : signup ? 'Account ဖန်တီးမယ်' : 'ဝင်မယ်')}</button>
     </form>
-    {!session && <><button className="text-button" disabled={busy} onClick={() => { setGuest(!guest); setSignup(false); setNotice('') }}>{guest ? 'Email account နဲ့ ဝင်မယ်' : 'နာမည်တစ်ခုပဲ ထည့်ကစားမယ်'}</button>{!guest && <button className="text-button" disabled={busy} onClick={() => { setSignup(!signup); setNotice('') }}>{signup ? 'Account ရှိပြီးသား — ဝင်မယ်' : 'Account အသစ် ဖန်တီးမယ်'}</button>}</>}
-    <p className="auth-policy">ဝင်ရောက်ခြင်းဖြင့် <a href="/terms.html" target="_blank" rel="noreferrer">Terms</a> ကို သဘောတူပြီး <a href="/privacy.html" target="_blank" rel="noreferrer">Privacy Policy</a> ကို ဖတ်ရှုနိုင်ပါတယ်။</p>
-    <p role="status">{retrySeconds > 0 ? `${retrySeconds} စက္ကန့်နောက် ပြန်စမ်းပါ။ / Try again in ${retrySeconds} seconds.` : notice}</p>
+    {!session && <><button className="text-button" disabled={busy} onClick={() => { setGuest(!guest); setSignup(false); setNotice('') }}>{ui(guest ? 'Email account နဲ့ ဝင်မယ်' : 'နာမည်တစ်ခုပဲ ထည့်ကစားမယ်')}</button>{!guest && <button className="text-button" disabled={busy} onClick={() => { setSignup(!signup); setNotice('') }}>{ui(signup ? 'Account ရှိပြီးသား — ဝင်မယ်' : 'Account အသစ် ဖန်တီးမယ်')}</button>}</>}
+    <p className="auth-policy">{ui("ဝင်ရောက်ခြင်းဖြင့် ")}<a href="/terms.html" target="_blank" rel="noreferrer">{ui("Terms")}</a>{ui(" ကို သဘောတူပြီး ")}<a href="/privacy.html" target="_blank" rel="noreferrer">{ui("Privacy Policy")}</a>{ui(" ကို ဖတ်ရှုနိုင်ပါတယ်။")}</p>
+    <p role="status">{ui(retrySeconds > 0 ? `${retrySeconds} စက္ကန့်နောက် ပြန်စမ်းပါ။` : notice)}</p>
   </div>
 }
 
 function RankingTabs({ label, items, value, onChange }) {
+  const { ui } = useLocale()
   function onKeyDown(event, index) {
     let next
     if (event.key === 'ArrowRight') next = (index + 1) % items.length
@@ -108,9 +111,10 @@ function RankingTabs({ label, items, value, onChange }) {
     onChange(items[next][0])
     event.currentTarget.parentElement.children[next].focus()
   }
-  return <div className="ranking-tabs" role="tablist" aria-label={label}>{items.map(([id, name], index) => <button key={id} id={`ranking-tab-${id}`} role="tab" aria-selected={value === id} aria-controls="ranking-results" tabIndex={value === id ? 0 : -1} onKeyDown={event => onKeyDown(event, index)} onClick={() => onChange(id)}>{name}</button>)}</div>
+  return <div className="ranking-tabs" role="tablist" aria-label={ui(label)}>{items.map(([id, name], index) => <button key={id} id={`ranking-tab-${id}`} role="tab" aria-selected={value === id} aria-controls="ranking-results" tabIndex={value === id ? 0 : -1} onKeyDown={event => onKeyDown(event, index)} onClick={() => onChange(id)}>{ui(name)}</button>)}</div>
 }
 export function Leaderboard({ initialMode, userId }) {
+  const { ui } = useLocale()
   const [mode, setMode] = useState(initialMode)
   const [englishMode, setEnglishMode] = useState(['easy', 'normal', 'hard'].includes(initialMode) ? initialMode : 'normal')
   const [proverbMode, setProverbMode] = useState(initialMode === 'proverb-input' ? 'proverb-input' : 'proverb-choice')
@@ -135,13 +139,13 @@ export function Leaderboard({ initialMode, userId }) {
     return () => { active = false }
   }, [mode, attempt])
   return <div className="leaderboard-content">
-    <RankingTabs label="Game mode" items={[[ 'english', 'English Words' ], ['slang', 'မြန်မာ Slang'], ['proverb', 'စကားပုံ']]} value={group} onChange={next => selectMode(next === 'english' ? englishMode : next === 'proverb' ? proverbMode : 'slang')} />
-    {group === 'english' && <RankingTabs label="အခက်အခဲအဆင့်" items={[[ 'easy', 'Easy' ], ['normal', 'Normal'], ['hard', 'Hard']]} value={mode} onChange={selectMode} />}
-    {group === 'proverb' && <RankingTabs label="ဖြေနည်း" items={[[ 'proverb-choice', 'ရွေးဖြေ' ], ['proverb-input', 'ရိုက်ဖြေ']]} value={mode} onChange={selectMode} />}
+    <RankingTabs label={ui("Game mode")} items={[[ 'english', 'English Words' ], ['slang', 'မြန်မာ Slang'], ['proverb', 'စကားပုံ']]} value={group} onChange={next => selectMode(next === 'english' ? englishMode : next === 'proverb' ? proverbMode : 'slang')} />
+    {group === 'english' && <RankingTabs label={ui("အခက်အခဲအဆင့်")} items={[[ 'easy', 'Easy' ], ['normal', 'Normal'], ['hard', 'Hard']]} value={mode} onChange={selectMode} />}
+    {group === 'proverb' && <RankingTabs label={ui("ဖြေနည်း")} items={[[ 'proverb-choice', 'ရွေးဖြေ' ], ['proverb-input', 'ရိုက်ဖြေ']]} value={mode} onChange={selectMode} />}
     <div id="ranking-results" role="tabpanel" aria-labelledby={`ranking-tab-${mode}`} aria-busy={status === 'loading'} tabIndex={0}>
-    <p>အနိုင်ရပွဲအရေအတွက်နဲ့ အဆင့်စီထားပါတယ်။ နောက်တစ်ဆင့်မှာ အကောင်းဆုံး streak ကို နှိုင်းယှဉ်ပါတယ်။</p>
-    {status === 'loading' ? <p role="status">ရလဒ်တွေ ယူနေပါတယ်…</p> : status === 'error' ? <div role="status"><p>{error}</p><button onClick={() => { setStatus('loading'); setAttempt(attempt + 1) }}>ပြန်စမ်းမယ်</button></div> : !rows.length ? <p>ရလဒ် မရှိသေးပါ။ ပထမဆုံး ကစားသူ ဖြစ်လိုက်ပါ!</p> : <ol className="ranking-list">{rows.map((row, index) => <li key={row.player_id} className={row.player_id === userId ? 'your-rank' : ''}><span className="rank-number">{index+1}</span><span>{row.display_name}{row.player_id === userId && <small> သင်</small>}</span><strong>{row.wins}<small> နိုင်ပွဲ · streak {row.best_streak}</small></strong></li>)}</ol>}
+    <p>{ui("အနိုင်ရပွဲအရေအတွက်နဲ့ အဆင့်စီထားပါတယ်။ နောက်တစ်ဆင့်မှာ အကောင်းဆုံး streak ကို နှိုင်းယှဉ်ပါတယ်။")}</p>
+    {status === 'loading' ? <p role="status">{ui("ရလဒ်တွေ ယူနေပါတယ်…")}</p> : status === 'error' ? <div role="status"><p>{ui(error)}</p><button onClick={() => { setStatus('loading'); setAttempt(attempt + 1) }}>{ui("ပြန်စမ်းမယ်")}</button></div> : !rows.length ? <p>{ui("ရလဒ် မရှိသေးပါ။ ပထမဆုံး ကစားသူ ဖြစ်လိုက်ပါ!")}</p> : <ol className="ranking-list">{rows.map((row, index) => <li key={row.player_id} className={row.player_id === userId ? 'your-rank' : ''}><span className="rank-number">{index+1}</span><span>{row.display_name}{row.player_id === userId && <small>{ui(" သင်")}</small>}</span><strong>{row.wins}<small>{ui(" နိုင်ပွဲ · streak ")}{ui(row.best_streak)}</small></strong></li>)}</ol>}
     </div>
-    <p className="ranking-note">ပျော်ပျော်ပါးပါး ကစားရန် leaderboard ဖြစ်ပါတယ်။</p>
+    <p className="ranking-note">{ui("ပျော်ပျော်ပါးပါး ကစားရန် leaderboard ဖြစ်ပါတယ်။")}</p>
   </div>
 }

@@ -4,6 +4,7 @@ import './index.css'
 import './mobile.css'
 import './theme.css'
 import App from './App.jsx'
+import LocaleProvider from './components/LocaleProvider.jsx'
 import { registerSW } from 'virtual:pwa-register'
 
 registerSW({
@@ -23,6 +24,6 @@ registerSW({
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <LocaleProvider><App /></LocaleProvider>
   </StrictMode>,
 )

@@ -1,0 +1,1358 @@
+[
+  [
+    "Sign in",
+    "ဝင်မယ်"
+  ],
+  [
+    "Already have an account? Sign in",
+    "အကောင့်ရှိပြီးသားလား? ဝင်မယ်"
+  ],
+  [
+    "Create a new account",
+    "အကောင့်အသစ် ဖန်တီးမယ်"
+  ],
+  [
+    "Create account",
+    "အကောင့်ဖန်တီးမယ်"
+  ],
+  [
+    "Play with this name",
+    "ဒီနာမည်နဲ့ စကစားမယ်"
+  ],
+  [
+    "Activity",
+    "ကစားမှုမှတ်တမ်း"
+  ],
+  [
+    "Correct",
+    "ဖြေမှန်"
+  ],
+  [
+    "About & Credits",
+    "အကြောင်းနှင့် ကျေးဇူးတင်လွှာ"
+  ],
+  [
+    "Leaderboard",
+    "အဆင့်စာရင်း"
+  ],
+  [
+    "Resume",
+    "ပြန်ဆက်မယ်"
+  ],
+  [
+    "Pause",
+    "ခဏနားမယ်"
+  ],
+  [
+    "Keyboard shortcuts",
+    "ဖြတ်လမ်းခလုတ်များ"
+  ],
+  [
+    "Your position",
+    "သင့်အဆင့်"
+  ],
+  [
+    "Burmese proverbs",
+    "မြန်မာစကားပုံ"
+  ],
+  [
+    "Myanmar Slang",
+    "မြန်မာဗန်းစကား"
+  ],
+  [
+    "Your profile · Activity",
+    "သင့်မှတ်တမ်း · ကစားမှုမှတ်တမ်း"
+  ],
+  [
+    "Player",
+    "ကစားသူ"
+  ],
+  [
+    "Sign in",
+    "နာမည်ထည့်မယ်"
+  ],
+  [
+    "Your account",
+    "သင့်အကောင့်"
+  ],
+  [
+    "Sign in",
+    "ဝင်မယ်"
+  ],
+  [
+    "Feedback",
+    "အကြံပြုချက်ပို့ရန်"
+  ],
+  [
+    "Your profile · Activity",
+    "သင့် Profile · Activity"
+  ],
+  [
+    "Please wait…",
+    "ခဏစောင့်ပါ…"
+  ],
+  [
+    "Logout",
+    "ထွက်မယ်"
+  ],
+  [
+    "Choose a letter to start.",
+    "စာလုံးတစ်လုံး ရွေးပြီး စတင်လိုက်ပါ။"
+  ],
+  [
+    "Read the prompt and fill in the blank.",
+    "ပြထားတဲ့တစ်ဝက်ကို ကြည့်ပြီး ကွက်လပ်ကို ဖြည့်ပါ။"
+  ],
+  [
+    "Type the full answer using a Myanmar keyboard.",
+    "မြန်မာ keyboard နဲ့ အဖြေအပြည့်ရိုက်ပါ။"
+  ],
+  [
+    "Enter your answer in Myanmar.",
+    "အဖြေကို မြန်မာလို ရိုက်ထည့်ပါ။"
+  ],
+  [
+    "You have already tried this answer.",
+    "ဒီအဖြေ စမ်းပြီးသားပါ။"
+  ],
+  [
+    "Not quite. Try again.",
+    "မမှန်သေးဘူး။ ပြန်စမ်းကြည့်ပါ။"
+  ],
+  [
+    "Switch to a Myanmar keyboard and type your answer.",
+    "မြန်မာ keyboard ကို ပြောင်းပြီး မြန်မာလို ရိုက်ပါ။"
+  ],
+  [
+    "You have already tried this answer. No extra life lost.",
+    "ဒီအဖြေ စမ်းပြီးသားပါ။ အသက်ထပ်မလျော့ပါဘူး။"
+  ],
+  [
+    "The beginning is revealed. No life lost.",
+    "စကားလုံးအစကို ဖော်ပေးထားပါတယ်။ အသက်မလျော့ပါဘူး။"
+  ],
+  [
+    "Switch to English",
+    "အင်္ဂလိပ်လို ပြောင်းမယ်"
+  ],
+  [
+    "Leaderboard",
+    "အဆင့်စာရင်း"
+  ],
+  [
+    "About & Credits",
+    "အကြောင်းနှင့် ကျေးဇူးတင်လွှာ"
+  ],
+  [
+    "Mute sound",
+    "အသံ ပိတ်မယ်"
+  ],
+  [
+    "Enable sound",
+    "အသံ ဖွင့်မယ်"
+  ],
+  [
+    "Preparing the game…",
+    "ပွဲကို ပြင်ဆင်နေပါတယ်…"
+  ],
+  [
+    "← Back",
+    "← နောက်သို့"
+  ],
+  [
+    "What will you play today?",
+    "ဒီနေ့ ဘာကစားမလဲ?"
+  ],
+  [
+    "Choose the mode you want to play and start.",
+    "ကစားချင်တဲ့ mode ကို ရွေးပြီး စတင်လိုက်ပါ။"
+  ],
+  [
+    "Proverbs",
+    "စကားပုံ"
+  ],
+  [
+    "You can also move with Tab and select with Enter.",
+    "Tab နဲ့ ရွှေ့ပြီး Enter နဲ့လည်း ရွေးနိုင်ပါတယ်။"
+  ],
+  [
+    "Myanmar Slang",
+    "မြန်မာ Slang"
+  ],
+  [
+    "Proverbs · Multiple choice",
+    "စကားပုံ · ရွေးဖြေ"
+  ],
+  [
+    "Proverbs · Type the answer",
+    "စကားပုံ · ရိုက်ဖြေ"
+  ],
+  [
+    "· Resume →",
+    "· ပြန်ဆက်မယ် →"
+  ],
+  [
+    "Read the Burmese clue and guess the English word one letter at a time.",
+    "မြန်မာလို clue ဖတ်ပြီး အင်္ဂလိပ်စကားလုံးကို တစ်လုံးချင်း ခန့်မှန်းပါ။"
+  ],
+  [
+    "Look at the meaning and type the Burmese slang word.",
+    "ပေးထားတဲ့ အဓိပ္ပာယ်ကို ကြည့်ပြီး မြန်မာဗန်းစကားကို ရိုက်ဖြေပါ။"
+  ],
+  [
+    "Burmese proverbs",
+    "မြန်မာစကားပုံ"
+  ],
+  [
+    "Read the proverb and fill in the blank.",
+    "စကားပုံရဲ့ အစတစ်ဝက်ကို ကြည့်ပြီး ကွက်လပ်ကို ဖြည့်ပါ။"
+  ],
+  [
+    "Choose this mode",
+    "ဒီ mode ရွေးမယ်"
+  ],
+  [
+    "Start ·",
+    "စကစားမယ် ·"
+  ],
+  [
+    "Back",
+    "နောက်သို့"
+  ],
+  [
+    "· Game setup",
+    "ကစားဖို့ ပြင်ဆင်မယ်"
+  ],
+  [
+    "Category",
+    "အမျိုးအစား"
+  ],
+  [
+    "Difficulty",
+    "အခက်အခဲအဆင့်"
+  ],
+  [
+    "Burmese slang",
+    "မြန်မာဗန်းစကား"
+  ],
+  [
+    ". This mode has no difficulty levels.",
+    "။ ဒီ mode မှာ အခက်အခဲအဆင့် ခွဲမထားပါ။"
+  ],
+  [
+    "Answer mode",
+    "ဖြေနည်း"
+  ],
+  [
+    "Multiple choice",
+    "ရွေးဖြေမယ်"
+  ],
+  [
+    "Type the answer",
+    "ရိုက်ဖြေမယ်"
+  ],
+  [
+    "8 lives. One free hint. No time limit.",
+    "မှားခွင့် ၈ ကြိမ်။ Hint အခမဲ့ တစ်ကြိမ်။ အချိန်ကန့်သတ်ချက် မရှိပါ။"
+  ],
+  [
+    "Start playing →",
+    "စကစားမယ် →"
+  ],
+  [
+    "Multiple choice",
+    "ရွေးဖြေ"
+  ],
+  [
+    "Type the answer",
+    "ရိုက်ဖြေ"
+  ],
+  [
+    "Round duration",
+    "ပွဲကစားချိန်"
+  ],
+  [
+    "Time",
+    "အချိန်"
+  ],
+  [
+    "Streak",
+    "ဆက်တိုက်နိုင်ပွဲ"
+  ],
+  [
+    "· Best",
+    "· အကောင်းဆုံး"
+  ],
+  [
+    "Lives remaining",
+    "ကျန်တဲ့ မှားခွင့်"
+  ],
+  [
+    "Fill in the blank",
+    "ကွက်လပ်ကို ဖြည့်ပါ"
+  ],
+  [
+    "Starts with —",
+    "အစ —"
+  ],
+  [
+    "Type the Burmese slang word",
+    "မြန်မာဗန်းစကားကို ရိုက်ဖြေပါ"
+  ],
+  [
+    "Which word is it?",
+    "ဘယ်စကားလုံးလဲ?"
+  ],
+  [
+    "LETTERS",
+    "လုံး"
+  ],
+  [
+    "Word to guess",
+    "ခန့်မှန်းရမယ့် စကားလုံး"
+  ],
+  [
+    "You saved them! Play another round.",
+    "ကယ်တင်နိုင်ပြီ! နောက်တစ်ပွဲ ဆက်ကစားမယ်။"
+  ],
+  [
+    "The prompt is your hint.",
+    "တစ်ဝက်ကို hint အဖြစ် ပြထားပါတယ်။"
+  ],
+  [
+    "Need help? Reveal a free clue.",
+    "ခက်နေပြီလား? Clue ကို အခမဲ့ ကြည့်ပါ။"
+  ],
+  [
+    "Show clue",
+    "Clue ကြည့်မယ်"
+  ],
+  [
+    "Hint used",
+    "Hint သုံးပြီး"
+  ],
+  [
+    "Reveal beginning",
+    "အစ ဖော်မယ်"
+  ],
+  [
+    "Reveal letter",
+    "Letter ဖော်မယ်"
+  ],
+  [
+    "Give up and reveal answer",
+    "အဖြေကြည့်ပြီး အရှုံးပေးမယ်"
+  ],
+  [
+    "Choose the missing part",
+    "ကျန်တစ်ဝက် ရွေးပါ"
+  ],
+  [
+    "Your answer",
+    "သင့်အဖြေ"
+  ],
+  [
+    "Type the missing part…",
+    "ကျန်တစ်ဝက်ကို ရိုက်ပါ…"
+  ],
+  [
+    "Type in Myanmar…",
+    "မြန်မာလို ရိုက်ပါ…"
+  ],
+  [
+    "Check",
+    "စစ်မယ်"
+  ],
+  [
+    "Choose a letter",
+    "စာလုံးရွေးပါ"
+  ],
+  [
+    "A–Z · Type a letter or tap a key",
+    "A–Z · Type a letter or tap a key / စာလုံးကို နှိပ်ပါ"
+  ],
+  [
+    "Meaning",
+    "အဓိပ္ပာယ်"
+  ],
+  [
+    "Retry saving",
+    "ပြန်သိမ်းမယ်"
+  ],
+  [
+    "Next round →",
+    "နောက်တစ်ပွဲ ကစားမယ် →"
+  ],
+  [
+    "Your player name",
+    "သင့်ကစားသူနာမည်"
+  ],
+  [
+    "Enter a name to start",
+    "နာမည်ထည့်ပြီး စကစားပါ"
+  ],
+  [
+    "Give up?",
+    "အရှုံးပေးမလား?"
+  ],
+  [
+    "Give up this round and reveal the answer? It counts as a loss and ends your current streak.",
+    "ဒီပွဲကို အရှုံးပေးပြီး အဖြေကြည့်မလား? အရှုံးအဖြစ် မှတ်တမ်းဝင်ပြီး လက်ရှိ streak ပြတ်ပါမယ်။"
+  ],
+  [
+    "Keep trying",
+    "ဆက်ကြိုးစားမယ်"
+  ],
+  [
+    "Send feedback",
+    "Feedback ပေးမယ်"
+  ],
+  [
+    "Start a new round?",
+    "ပွဲအသစ် ပြန်စမလား?"
+  ],
+  [
+    "End the current round and start a new one with these settings.",
+    "လက်ရှိပွဲကို ရပ်ပြီး ရွေးထားတဲ့ပုံစံနဲ့ ပွဲအသစ် စပါမယ်။"
+  ],
+  [
+    "Continue this round",
+    "လက်ရှိပွဲ ဆက်ကစားမယ်"
+  ],
+  [
+    "Apply and start new round",
+    "ပြောင်းပြီး ပွဲအသစ်စမယ်"
+  ],
+  [
+    "Burmese slang source —",
+    "မြန်မာဗန်းစကားများအတွက် အရင်းအမြစ် —"
+  ],
+  [
+    "Ban Sagar",
+    "Ban Sagar (ဗန်းစကား)"
+  ],
+  [
+    ". Clues have been rewritten for this game.",
+    "။ Game အတွက် clues များကို ပြန်လည်ရေးသားထားပါတယ်။"
+  ],
+  [
+    "Original creator & inspiration",
+    "မူရင်းဖန်တီးသူနှင့် စိတ်ကူးရင်းမြစ်"
+  ],
+  [
+    "This game draws inspiration from",
+    "ဒီ game ဟာ"
+  ],
+  [
+    "’s",
+    "ရဲ့"
+  ],
+  [
+    ".",
+    "ကို အခြေခံပြီး စိတ်ကူးရယူ ဖန်တီးထားပါတယ်။"
+  ],
+  [
+    "In the original game, guess letters to rescue programming languages.",
+    "မူရင်း game မှာ စာလုံးတစ်လုံးချင်း ခန့်မှန်းပြီး programming languages များကို ကယ်တင်ရပါတယ်။"
+  ],
+  [
+    "Additional development",
+    "ထပ်မံဖြည့်စွက် ဖန်တီးမှု"
+  ],
+  [
+    "developed the additional features in this version.",
+    "က ဒီ version အတွက် ထပ်မံဖြည့်စွက် ပြင်ဆင်ထားပါတယ်။"
+  ],
+  [
+    "Features include Burmese slang and proverbs, Myanmar clues, difficulty levels and categories, mobile layouts, Google sign-in, timed leaderboards, feedback, and PWA support.",
+    "မြန်မာ Slang နဲ့ စကားပုံ modes၊ မြန်မာလို clues၊ difficulty နဲ့ categories၊ mobile layout၊ Google sign-in၊ timed leaderboard၊ feedback နဲ့ PWA support တို့ ပါဝင်ပါတယ်။"
+  ],
+  [
+    "Myanmar slang source",
+    "မြန်မာဗန်းစကား ရင်းမြစ်"
+  ],
+  [
+    "Myanmar proverb source",
+    "မြန်မာစကားပုံ ရင်းမြစ်"
+  ],
+  [
+    "Mobile reading font",
+    "မိုဘိုင်းစာဖတ်ရန် ဖောင့်"
+  ],
+  [
+    "Feedback is temporarily unavailable. Please try again later.",
+    "Feedback လက်ခံတဲ့စနစ်ကို Server မှာ ပြင်ဆင်နေဆဲပါ။ ခဏနေ ပြန်စမ်းပါ။"
+  ],
+  [
+    "Use between 10 and 2000 characters.",
+    "စာသားကို ၁၀ လုံးမှ ၂၀၀၀ လုံးအတွင်း ရေးပါ။"
+  ],
+  [
+    "You have already sent feedback today. Try again tomorrow.",
+    "ဒီနေ့အတွက် feedback ပို့ပြီးသားပါ။ နောက်နေ့မှ ထပ်ပို့နိုင်ပါတယ်။"
+  ],
+  [
+    "Feedback sent. Thank you for your suggestion.",
+    "Feedback ပို့ပြီးပါပြီ။ အကြံပြုပေးတာ ကျေးဇူးတင်ပါတယ်။"
+  ],
+  [
+    "Sign in to send feedback using a player name, Google, or email account.",
+    "Feedback ပို့ဖို့ ကစားသူအဖြစ် ဝင်ပါ။ နာမည်တစ်ခုပဲထည့်ခြင်း၊ Google သို့မဟုတ် email account နဲ့ ဝင်နိုင်ပါတယ်။"
+  ],
+  [
+    "Sign in with a name",
+    "နာမည်နဲ့ ဝင်မယ်"
+  ],
+  [
+    "Each player can send one feedback message a day. The day resets at midnight Myanmar time.",
+    "ကစားသူတစ်ယောက်ကို တစ်နေ့ feedback တစ်ခု ပို့နိုင်ပါတယ်။ မြန်မာအချိန် ည ၁၂ နာရီမှာ နေ့အသစ်စပါမယ်။"
+  ],
+  [
+    "Checking today's feedback status…",
+    "ဒီနေ့ ပို့ထားခြင်း ရှိမရှိ စစ်နေပါတယ်…"
+  ],
+  [
+    "Check again",
+    "ပြန်စစ်မယ်"
+  ],
+  [
+    "Today's feedback has been sent. You can send another tomorrow.",
+    "ဒီနေ့ feedback ပို့ပြီးသားပါ။ နောက်နေ့မှ ထပ်ပို့နိုင်ပါတယ်။"
+  ],
+  [
+    "Feedback type",
+    "Feedback အမျိုးအစား"
+  ],
+  [
+    "Suggestion",
+    "အကြံပြုချက်"
+  ],
+  [
+    "Bug report",
+    "အမှားတွေ့ရှိမှု"
+  ],
+  [
+    "Other",
+    "အခြား"
+  ],
+  [
+    "Your feedback",
+    "သင့်အကြံပြုချက်"
+  ],
+  [
+    "Describe your suggestion or the issue you found…",
+    "ပြင်စေချင်တာ၊ အမှားတွေ့တာကို ရေးပေးပါ…"
+  ],
+  [
+    "/ 2000 · At least 10 characters",
+    "/ 2000 · အနည်းဆုံး ၁၀ လုံး"
+  ],
+  [
+    "Sending…",
+    "ပို့နေပါတယ်…"
+  ],
+  [
+    "Submit feedback",
+    "Feedback ပို့မယ်"
+  ],
+  [
+    "Only the developer can read feedback. It does not appear on the public leaderboard.",
+    "Feedback ကို developer ပဲ ဖတ်နိုင်ပါတယ်။ Public leaderboard မှာ မပြပါဘူး။"
+  ],
+  [
+    "Privacy Policy",
+    "ကိုယ်ရေးအချက်အလက် မူဝါဒ"
+  ],
+  [
+    "You",
+    "သင်"
+  ],
+  [
+    "Completed",
+    "အားလုံးပြီးဆုံး"
+  ],
+  [
+    "Out of lives",
+    "အသက်ကုန်"
+  ],
+  [
+    "Paused",
+    "ခဏနားထား"
+  ],
+  [
+    "Ended",
+    "အဆုံးသတ်ထား"
+  ],
+  [
+    "Correct",
+    "ဖြေမှန်"
+  ],
+  [
+    "Wins",
+    "နိုင်ပွဲ"
+  ],
+  [
+    "No timed result yet",
+    "အချိန် မရှိသေး"
+  ],
+  [
+    "Back",
+    "နောက်သို့ / Back"
+  ],
+  [
+    "Players",
+    "ကစားသူ · Players"
+  ],
+  [
+    "Proverbs",
+    "စကားပုံ · Proverbs"
+  ],
+  [
+    "Total correct proverb answers in challenges",
+    "ပွဲရှည် စကားပုံဖြေမှန် စုစုပေါင်း"
+  ],
+  [
+    "Total proverb wins",
+    "စကားပုံနိုင်ပွဲ စုစုပေါင်း"
+  ],
+  [
+    "Ranked by correct answers in each player's best run. Ties favor the shorter total answering time.",
+    "အကောင်းဆုံးပွဲတစ်ပွဲရဲ့ ဖြေမှန်အရေအတွက်နဲ့ စီပါတယ်။ ဖြေမှန်တူရင် စုစုပေါင်းဖြေချိန် ပိုနည်းသူက အပေါ်ရောက်ပါမယ်။"
+  ],
+  [
+    "When wins are tied, the faster average answering time ranks higher.",
+    "နိုင်ပွဲတူရင် ပျမ်းမျှဖြေချိန် ပိုမြန်သူက အပေါ်ရောက်ပါမယ်။"
+  ],
+  [
+    "Loading results…",
+    "ရလဒ်တွေ ယူနေပါတယ်…"
+  ],
+  [
+    "Try again",
+    "ပြန်စမ်းမယ်"
+  ],
+  [
+    "Your position",
+    "သင့်အဆင့် · Your position"
+  ],
+  [
+    "You have no results in this category yet.",
+    "ဒီအမျိုးအစားမှာ သင့်ရလဒ် မရှိသေးပါ။"
+  ],
+  [
+    "Top 100",
+    "ထိပ်ဆုံး ၁၀၀"
+  ],
+  [
+    "players · Showing",
+    "ဦး · ပြသထားသူ"
+  ],
+  [
+    "players",
+    "ဦး"
+  ],
+  [
+    "No results yet. Be the first to play!",
+    "ရလဒ် မရှိသေးပါ။ ပထမဆုံး ကစားသူ ဖြစ်လိုက်ပါ!"
+  ],
+  [
+    "Only challenge results are shown. Earlier single-question wins are separate. Paused runs are included and updated when resumed. Pauses and answer-reading time are excluded.",
+    "ပွဲရှည်ရလဒ်များကိုသာ ပြထားပါတယ်။ အရင်မေးခွန်းတစ်ခုချင်း နိုင်ပွဲတွေကို ပွဲရှည်အမှတ်အဖြစ် မပေါင်းပါ။ ခဏနားထားတဲ့ပွဲတွေလည်း ပါဝင်ပါတယ်။ ပြန်ဆက်ရင် မူလပွဲရလဒ်ကို update လုပ်ပါတယ်။ Pause နဲ့ အဖြေဖတ်ချိန်ကို ဖြေချိန်ထဲ မထည့်ပါ။"
+  ],
+  [
+    "Average time uses timed wins only. Older untimed rounds do not count as zero seconds. Equal times are ranked by best streak.",
+    "ပျမ်းမျှအချိန်ကို အချိန်မှတ်ထားသော နိုင်ပွဲများမှ တွက်ထားပါတယ်။ အဟောင်းပွဲများကို ၀ စက္ကန့်လို့ မတွက်ပါ။ အချိန်လည်းတူရင် best streak နဲ့ စီပါတယ်။"
+  ],
+  [
+    "All questions completed",
+    "အားလုံးပြီးဆုံးပါပြီ"
+  ],
+  [
+    "All 3 lives used",
+    "အသက် ၃ ခု ကုန်သွားပါပြီ"
+  ],
+  [
+    "Game ended",
+    "ပွဲအဆုံးသတ်ထားပါတယ်"
+  ],
+  [
+    "Total answering time",
+    "စုစုပေါင်းဖြေချိန်"
+  ],
+  [
+    "Pause",
+    "Pause · ခဏနားမယ်"
+  ],
+  [
+    "Resume",
+    "Resume · ပြန်ဆက်မယ်"
+  ],
+  [
+    "Reading the answer — timer paused.",
+    "အဖြေဖတ်နေချိန် — Timer ရပ်ထားပါတယ်။"
+  ],
+  [
+    "Enter · Next question / Tap Next",
+    "Enter · နောက်မေးခွန်း / Tap Next"
+  ],
+  [
+    "1–4 · Choose an answer · P · Pause / Resume",
+    "1–4 · ရွေးဖြေပါ / Tap an answer · P · Pause / Resume"
+  ],
+  [
+    "Type with a Myanmar keyboard · Enter / Check · P · Pause / Resume",
+    "မြန်မာ keyboard နဲ့ ရိုက်ပါ · Enter / စစ်မယ် · P · Pause / Resume"
+  ],
+  [
+    "Completed",
+    "ပြီးစီး"
+  ],
+  [
+    "Lives",
+    "အသက်"
+  ],
+  [
+    "Game progress",
+    "ပွဲတိုးတက်မှု"
+  ],
+  [
+    "Incorrect",
+    "ဖြေမှား"
+  ],
+  [
+    "Skipped",
+    "ကျော်ထား"
+  ],
+  [
+    "· Remaining",
+    "· ကျန်"
+  ],
+  [
+    "items",
+    "ခု"
+  ],
+  [
+    "Last question's answer",
+    "နောက်ဆုံးမေးခွန်းအဖြေ"
+  ],
+  [
+    "Sign in before starting a run to save results to the leaderboard.",
+    "Leaderboard မှာ သိမ်းရန် ပွဲမစမီ account ဝင်ထားပါ။"
+  ],
+  [
+    "Choose game",
+    "Game ရွေးမယ်"
+  ],
+  [
+    "New game →",
+    "ပွဲအသစ် စမယ် →"
+  ],
+  [
+    "Game paused",
+    "ခဏနားထားပါတယ်"
+  ],
+  [
+    "Pauses do not count toward answering time. Resume later in this browser.",
+    "ခဏနားချိန်ကို ဖြေချိန်ထဲ မတွက်ပါ။ ဒီ browser မှာ နောက်မှ ပြန်ဆက်နိုင်ပါတယ်။"
+  ],
+  [
+    "Resume →",
+    "ပြန်ဆက်မယ် →"
+  ],
+  [
+    "End game",
+    "ပွဲအဆုံးသတ်မယ်"
+  ],
+  [
+    "Correct!",
+    "မှန်ပါတယ်!"
+  ],
+  [
+    "Skipped · One life lost.",
+    "ကျော်ထားပါတယ် · အသက် ၁ ခု လျော့သွားပါတယ်။"
+  ],
+  [
+    "Incorrect · One life lost.",
+    "မမှန်ပါ · အသက် ၁ ခု လျော့သွားပါတယ်။"
+  ],
+  [
+    "Reading the answer and meaning does not count toward answering time.",
+    "အဖြေနဲ့ အဓိပ္ပာယ်ဖတ်နေချိန်ကို timer ထဲ မတွက်ပါ။"
+  ],
+  [
+    "Next question →",
+    "နောက်မေးခွန်း →"
+  ],
+  [
+    "Question",
+    "မေးခွန်း"
+  ],
+  [
+    "Skip (−1 life)",
+    "ကျော်မယ် (−1 အသက်)"
+  ],
+  [
+    "End this game?",
+    "ပွဲအဆုံးသတ်မလား?"
+  ],
+  [
+    "Save your current correct answers and time, then end the game. This run cannot be resumed.",
+    "လက်ရှိဖြေမှန်အရေအတွက်နဲ့ ဖြေချိန်ကို သိမ်းပြီး ပွဲအဆုံးသတ်ပါမယ်။ ဒီပွဲကို ပြန်ဆက်လို့ မရတော့ပါ။"
+  ],
+  [
+    "Keep paused",
+    "ခဏနားထားမယ်"
+  ],
+  [
+    "End and save",
+    "အဆုံးသတ်ပြီး သိမ်းမယ်"
+  ],
+  [
+    "You can try again now.",
+    "ပြန်စမ်းနိုင်ပါပြီ။ / You can try again now."
+  ],
+  [
+    "Enter a name between 2 and 30 characters.",
+    "နာမည်ကို ၂ လုံးမှ ၃၀ လုံးအတွင်း ထည့်ပါ။"
+  ],
+  [
+    "Name saved.",
+    "နာမည် သိမ်းပြီးပါပြီ။"
+  ],
+  [
+    "Open the confirmation link in your email to sign in.",
+    "Email ထဲက အတည်ပြု link ကို နှိပ်ပြီး ဝင်ပါ။"
+  ],
+  [
+    "Change and save your player name. Wins and best streaks are saved by game mode on the leaderboard.",
+    "နာမည်ကို ပြောင်းသိမ်းနိုင်ပါတယ်။ နိုင်ပွဲနဲ့ အကောင်းဆုံး streak ကို mode အလိုက် leaderboard မှာ သိမ်းပေးပါမယ်။"
+  ],
+  [
+    "Enter a name to start. No email or password needed. Your wins will be saved on the leaderboard.",
+    "နာမည်တစ်ခုပဲ ထည့်ပြီး စကစားပါ။ Email နဲ့ password မလိုပါဘူး။ သင့်နိုင်ပွဲတွေကို leaderboard မှာ သိမ်းပေးပါမယ်။"
+  ],
+  [
+    "Sign in with an account to access your results across devices.",
+    "Account နဲ့ ဝင်ပြီး စက်မတူလည်း သင့်ရလဒ်တွေကို ဆက်သုံးနိုင်ပါတယ်။"
+  ],
+  [
+    "Your player is remembered in this browser. A name alone cannot restore your account on another device.",
+    "ဒီ browser မှာ ကစားသူကို မှတ်ထားပါမယ်။ နာမည်တစ်ခုတည်းနဲ့ အခြားစက်ကနေ အကောင့်ပြန်ဝင်လို့ မရပါဘူး။"
+  ],
+  [
+    "Continue with Google",
+    "Google နဲ့ ဆက်ဝင်မယ်"
+  ],
+  [
+    "or",
+    "သို့မဟုတ်"
+  ],
+  [
+    "Confirm your leaderboard name and start a new game.",
+    "Leaderboard မှာ ပြမယ့်နာမည်ကို အတည်ပြုပြီး ပွဲအသစ်စပါ။"
+  ],
+  [
+    "Player name",
+    "ကစားသူနာမည်"
+  ],
+  [
+    "Email",
+    "အီးမေးလ်"
+  ],
+  [
+    "Password",
+    "စကားဝှက်"
+  ],
+  [
+    "Play with this name",
+    "နာမည်နဲ့ စကစားမယ်"
+  ],
+  [
+    "Save name",
+    "နာမည် သိမ်းမယ်"
+  ],
+  [
+    "Create account",
+    "Account ဖန်တီးမယ်"
+  ],
+  [
+    "Sign in with email",
+    "Email account နဲ့ ဝင်မယ်"
+  ],
+  [
+    "Play with just a name",
+    "နာမည်တစ်ခုပဲ ထည့်ကစားမယ်"
+  ],
+  [
+    "Already have an account? Sign in",
+    "Account ရှိပြီးသား — ဝင်မယ်"
+  ],
+  [
+    "Create a new account",
+    "Account အသစ် ဖန်တီးမယ်"
+  ],
+  [
+    "By signing in, you agree to the",
+    "ဝင်ရောက်ခြင်းဖြင့်"
+  ],
+  [
+    "Terms",
+    "စည်းကမ်းချက်များ"
+  ],
+  [
+    "and can read the",
+    "ကို သဘောတူပြီး"
+  ],
+  [
+    ".",
+    "ကို ဖတ်ရှုနိုင်ပါတယ်။"
+  ],
+  [
+    "Ranked by wins, then best streak.",
+    "အနိုင်ရပွဲအရေအတွက်နဲ့ အဆင့်စီထားပါတယ်။ နောက်တစ်ဆင့်မှာ အကောင်းဆုံး streak ကို နှိုင်းယှဉ်ပါတယ်။"
+  ],
+  [
+    "wins · streak",
+    "နိုင်ပွဲ · streak"
+  ],
+  [
+    "This leaderboard is for friendly competition.",
+    "ပျော်ပျော်ပါးပါး ကစားရန် leaderboard ဖြစ်ပါတယ်။"
+  ],
+  [
+    "Close",
+    "ပိတ်မယ်"
+  ],
+  [
+    "Loading profile…",
+    "Profile ကို ယူနေပါတယ်…"
+  ],
+  [
+    "Player not found.",
+    "ကစားသူကို မတွေ့ပါ။"
+  ],
+  [
+    "← Back",
+    "← နောက်သို့ / Back"
+  ],
+  [
+    "Your profile",
+    "သင့် Profile"
+  ],
+  [
+    "Total correct answers",
+    "ဖြေမှန် စုစုပေါင်း"
+  ],
+  [
+    "Correct in the last 365 days",
+    "ပြီးခဲ့တဲ့ ၃၆၅ ရက် ဖြေမှန်"
+  ],
+  [
+    "Active days",
+    "ကစားခဲ့တဲ့ရက်"
+  ],
+  [
+    "Activity",
+    "ကစားမှုမှတ်တမ်း · Activity"
+  ],
+  [
+    "Correct answers in the last 365 days:",
+    "ပြီးခဲ့တဲ့ ၃၆၅ ရက်အတွင်း ဖြေမှန်"
+  ],
+  [
+    "Mon",
+    "တနင်္လာ"
+  ],
+  [
+    "Wed",
+    "ဗုဒ္ဓဟူး"
+  ],
+  [
+    "Fri",
+    "သောကြာ"
+  ],
+  [
+    "Scroll horizontally to explore the chart.",
+    "Chart ကို ဘယ်ညာရွှေ့ပြီး ကြည့်နိုင်ပါတယ်။"
+  ],
+  [
+    "Less",
+    "နည်း"
+  ],
+  [
+    "More",
+    "များ"
+  ],
+  [
+    "Correct answers use Myanmar dates. Challenge scores saved on pause or end are included without double-counting. Older results appear on their original save dates.",
+    "မြန်မာစံတော်ချိန်အလိုက် သိမ်းထားတဲ့ ဖြေမှန်တွေကို ရေတွက်ပါတယ်။ Pause / End Game မှာ သိမ်းတဲ့ ပွဲရှည်အမှတ်လည်း ပါဝင်ပါတယ်။ အမှတ်တူကို ထပ်မပေါင်းပါ။ အဟောင်းရလဒ်များကို မူလသိမ်းရက်အလိုက် ပြထားပါတယ်။"
+  ],
+  [
+    "Daily totals",
+    "ရက်အလိုက် ကြည့်မယ် · Daily totals"
+  ],
+  [
+    "No activity yet.",
+    "ကစားမှုမှတ်တမ်း မရှိသေးပါ။"
+  ],
+  [
+    "Keyboard shortcuts",
+    "Keyboard shortcuts · ဖြတ်လမ်းခလုတ်များ"
+  ],
+  [
+    "Shortcuts available on this page. Background game shortcuts are paused while a dialog is open.",
+    "လက်ရှိစာမျက်နှာမှာ သုံးနိုင်တဲ့ shortcut များ။ Popup ဖွင့်ထားချိန်မှာ နောက်ခံဂိမ်း shortcut များ ရပ်ထားပါတယ်။"
+  ],
+  [
+    "Current page",
+    "လက်ရှိစာမျက်နှာ"
+  ],
+  [
+    "· Currently unavailable",
+    "· လောလောဆယ် မရနိုင်ပါ"
+  ],
+  [
+    "Game controls",
+    "ဂိမ်းအားလုံးအတွက် လမ်းညွှန်"
+  ],
+  [
+    "Select mode / answer / difficulty",
+    "Mode / အဖြေ / အခက်အခဲအဆင့် ရွေးရန်"
+  ],
+  [
+    "Guess an English letter",
+    "English စာလုံး ခန့်မှန်းရန်"
+  ],
+  [
+    "Start / Next / Confirm",
+    "စတင် / နောက်တစ်ခု / အတည်ပြု"
+  ],
+  [
+    "Back / Close / Challenge pause",
+    "နောက်သို့ / ပိတ် / ပွဲခဏနား"
+  ],
+  [
+    "Challenge pause / resume",
+    "ပွဲခဏနား / ပြန်ဆက်"
+  ],
+  [
+    "Hint · In English mode, use the button's shortcut",
+    "Hint · English မှာ ခလုတ်ရဲ့ shortcut ကို သုံးပါ"
+  ],
+  [
+    "Sound · In English mode, use the button's shortcut",
+    "အသံ · English မှာ ခလုတ်ရဲ့ shortcut ကို သုံးပါ"
+  ],
+  [
+    "Next round after finishing",
+    "ပွဲပြီးချိန် နောက်တစ်ပွဲ"
+  ],
+  [
+    "Move between controls",
+    "ခလုတ်များကြား ရွှေ့ရန်"
+  ],
+  [
+    "Activate the focused control",
+    "ရွေးထားတဲ့ခလုတ်ကို နှိပ်ရန်"
+  ],
+  [
+    "Open shortcut help",
+    "Shortcut လမ်းညွှန်ဖွင့်ရန်"
+  ],
+  [
+    "Use Alt+Shift combinations for other controls. Hover or focus a header control to see its shortcut. Typing takes priority while an input is focused.",
+    "ကျန်ခလုတ်များအတွက် Alt+Shift နဲ့ တွဲသုံးပါ။ Header ကို hover သို့မဟုတ် focus လုပ်ရင် shortcut ပြပါမယ်။ စာရိုက်နေချိန်မှာ စာရိုက်ခြင်းကို ဦးစားပေးပါတယ်။"
+  ],
+  [
+    "Linking a guest player to Google is temporarily unavailable.",
+    "နာမည်နဲ့ကစားသူကို Google နဲ့ချိတ်ရန် Server ပြင်ဆင်နေဆဲပါ။"
+  ],
+  [
+    "Guest play is temporarily unavailable. You can sign in with email.",
+    "နာမည်နဲ့ ကစားရန် Server ပြင်ဆင်နေဆဲပါ။ Email account နဲ့ ဝင်နိုင်ပါတယ်။"
+  ],
+  [
+    "Google sign-in is temporarily unavailable. Use a player name or email instead.",
+    "Google login ကို Server မှာ ပြင်ဆင်နေဆဲပါ။ နာမည်နဲ့ သို့မဟုတ် email account နဲ့ ဝင်နိုင်ပါတယ်။"
+  ],
+  [
+    "Too many requests. Wait a moment and try again.",
+    "တောင်းဆိုမှု များနေပါတယ်။ ခဏစောင့်ပြီး ပြန်စမ်းပါ။"
+  ],
+  [
+    "Cannot connect to the server. Check your internet and try again.",
+    "Server ကို ချိတ်မရသေးပါ။ Internet ပြန်စစ်ပြီး ထပ်စမ်းပါ။"
+  ],
+  [
+    "The leaderboard is temporarily unavailable. Please try again later.",
+    "Leaderboard ကို ပြင်ဆင်နေဆဲပါ။ ခဏနေ ပြန်စမ်းပါ။"
+  ],
+  [
+    "Confirm your email using the link in your inbox first.",
+    "Email ထဲက အတည်ပြု link ကို အရင်နှိပ်ပါ။"
+  ],
+  [
+    "Incorrect email or password.",
+    "Email သို့မဟုတ် password မမှန်ပါ။"
+  ],
+  [
+    "Connection failed. Please try again.",
+    "ချိတ်ဆက်မှု မအောင်မြင်ပါ။ ထပ်စမ်းပါ။"
+  ],
+  [
+    "Saved to the leaderboard.",
+    "Leaderboard မှာ သိမ်းပြီးပါပြီ။"
+  ],
+  [
+    "Saving results…",
+    "ရလဒ် သိမ်းနေပါတယ်…"
+  ],
+  [
+    "Everyday",
+    "နေ့စဉ်သုံး"
+  ],
+  [
+    "Food",
+    "အစားအစာ"
+  ],
+  [
+    "Animals",
+    "တိရစ္ဆာန်"
+  ],
+  [
+    "Tech",
+    "နည်းပညာ"
+  ],
+  [
+    "English Words",
+    "အင်္ဂလိပ်စကားလုံးများ"
+  ],
+  [
+    "English",
+    "အင်္ဂလိပ်"
+  ],
+  [
+    "Slang",
+    "ဗန်းစကား"
+  ],
+  [
+    "Easy",
+    "အလွယ်"
+  ],
+  [
+    "Normal",
+    "ပုံမှန်"
+  ],
+  [
+    "Hard",
+    "အခက်"
+  ],
+  [
+    "Player profile",
+    "ကစားသူမှတ်တမ်း"
+  ],
+  [
+    "Game mode",
+    "ကစားနည်း"
+  ],
+  [
+    "Game variant",
+    "ဖြေနည်း"
+  ],
+  [
+    "Leaderboard game",
+    "အဆင့်စာရင်း ကစားနည်း"
+  ],
+  [
+    "Your position",
+    "သင့်အဆင့်"
+  ],
+  [
+    "Choose an answer",
+    "အဖြေရွေးပါ"
+  ],
+  [
+    "Your answer",
+    "သင့်အဖြေ"
+  ],
+  [
+    "Word rescue game",
+    "စကားလုံးကယ်တင်ဂိမ်း"
+  ],
+  [
+    "Home · Choose game",
+    "ပင်မစာမျက်နှာ · ကစားနည်းရွေးရန်"
+  ],
+  [
+    "Account actions",
+    "အကောင့်လုပ်ဆောင်ချက်များ"
+  ],
+  [
+    "Inspired by",
+    "စိတ်ကူးရင်းမြစ်"
+  ],
+  [
+    "Additional development by Sann Lynn Htun",
+    "ထပ်မံဖန်တီးသူ Sann Lynn Htun"
+  ],
+  [
+    "Original repository · Jeff307-kib/End-Game ↗",
+    "မူရင်း repository · Jeff307-kib/End-Game ↗"
+  ],
+  [
+    "Myanmar proverbs are sourced from Dr. Win Thein's website.",
+    "မြန်မာစကားပုံများကို ဆရာ ဒေါက်တာ ၀င်းသိန်း Website မှ ယူသုံးထားတာဖြစ်ပါတယ်"
+  ],
+  [
+    "Player: {0}",
+    "ကစားသူ: {0}"
+  ],
+  [
+    "{0} is in the word. Getting closer!",
+    "{0} ပါတယ်။ ကယ်တင်ဖို့ နီးလာပြီ!"
+  ],
+  [
+    "{0} is not in the word. {1} is lost… Keep trying!",
+    "{0} မပါဘူး။ {1} ထွက်သွားပြီ… ဆက်ကြိုးစားမယ်!"
+  ],
+  [
+    "Revealed {0}. No life lost.",
+    "{0} ကို ဖော်ပေးလိုက်ပြီ။ အသက်မလျော့ပါဘူး။"
+  ],
+  [
+    "Play all {0} questions with 3 lives. Each wrong answer or skip costs one life. Only answering time counts; reading and pauses are excluded. Pause and resume later in this browser.",
+    "မေးခွန်း {0} ခုလုံးကို တစ်ပွဲတည်း ကစားမယ်။ ပွဲတစ်ပွဲလုံးအတွက် အသက် ၃ ခု။ မှားဖြေခြင်း သို့မဟုတ် ကျော်ခြင်းတိုင်း အသက် ၁ ခု လျော့ပါမယ်။ အဖြေဖတ်ချိန်နဲ့ Pause အချိန်ကို ဖယ်ပြီး ဖြေချိန်ပဲ ရေတွက်ပါတယ်။ ဒီ browser မှာ ခဏနားပြီး ပြန်ဆက်နိုင်ပါတယ်။"
+  ],
+  [
+    "Proverbs · {0}",
+    "စကားပုံ · {0}"
+  ],
+  [
+    "{0} lives remaining",
+    "မှားခွင့် {0} ကြိမ်ကျန်"
+  ],
+  [
+    "Answer — {0}",
+    "အဖြေ — {0}"
+  ],
+  [
+    "Completed {0} / {1} · {2}",
+    "ပြီးစီး {0} / {1} · {2}"
+  ],
+  [
+    "Best streak {0} · Proverb wins {1}",
+    "အကောင်းဆုံး ဆက်တိုက်နိုင်ပွဲ {0} · စကားပုံနိုင်ပွဲ {1}"
+  ],
+  [
+    "Total {0}",
+    "စုစုပေါင်း {0}"
+  ],
+  [
+    "Average {0}",
+    "ပျမ်းမျှ {0}"
+  ],
+  [
+    "{0} challenge",
+    "{0} ပွဲရှည်"
+  ],
+  [
+    "{0} lives left",
+    "အသက် {0} ခုကျန်"
+  ],
+  [
+    "{0}s · Please wait…",
+    "{0}s · ခဏစောင့်ပါ…"
+  ],
+  [
+    "Your position",
+    "သင့်အဆင့်"
+  ],
+  [
+    "Round duration",
+    "ပွဲကစားချိန်"
+  ],
+  [
+    "Letter {0}",
+    "စာလုံး {0}"
+  ],
+  [
+    "{0} correct answers",
+    "ဖြေမှန် {0} ခု"
+  ],
+  [
+    "{0}: {1} correct answers",
+    "{0}: ဖြေမှန် {1} ခု"
+  ],
+  [
+    "Last 365 days: {0} correct answers across {1} active days. Scroll horizontally to explore the chart; daily totals are listed below.",
+    "ပြီးခဲ့တဲ့ ၃၆၅ ရက်အတွင်း ကစားခဲ့သော {1} ရက်မှာ ဖြေမှန် {0} ခု။ ဇယားကို ဘယ်ညာရွှေ့ကြည့်နိုင်ပြီး ရက်အလိုက်အရေအတွက်ကို အောက်မှာ ကြည့်နိုင်ပါတယ်။"
+  ],
+  [
+    "Try again in {0} seconds.",
+    "{0} စက္ကန့်နောက် ပြန်စမ်းပါ။"
+  ],
+  [
+    "You can try again now.",
+    "ပြန်စမ်းနိုင်ပါပြီ။"
+  ],
+  [
+    "English ·",
+    "အင်္ဂလိပ် ·"
+  ],
+  [
+    "Slang ·",
+    "ဗန်းစကား ·"
+  ],
+  [
+    "EVERYDAY",
+    "နေ့စဉ်သုံး"
+  ],
+  [
+    "FOOD",
+    "အစားအစာ"
+  ],
+  [
+    "ANIMALS",
+    "တိရစ္ဆာန်"
+  ],
+  [
+    "TECH",
+    "နည်းပညာ"
+  ],
+  [
+    "MYANMAR SLANG",
+    "မြန်မာဗန်းစကား"
+  ],
+  [
+    "Noto Sans Myanmar",
+    "Noto Sans Myanmar"
+  ],
+  [
+    "SIL Open Font License",
+    "SIL Open Font License"
+  ],
+  [
+    "Best streak {0} · Proverb wins {1}",
+    "Best streak {0} · စကားပုံနိုင်ပွဲ {1}"
+  ],
+  [
+    "Players {0} · Showing {1}",
+    "ကစားသူ {0} ဦး · ပြသထားသူ {1} ဦး"
+  ],
+  [
+    "Burma Word Quest · Home",
+    "Burma Word Quest · ပင်မစာမျက်နှာ"
+  ],
+  [
+    "Burma Word Quest game",
+    "Burma Word Quest ဂိမ်း"
+  ],
+  [
+    "English words, Myanmar slang, and Burmese proverb challenges.",
+    "အင်္ဂလိပ်စကားလုံး၊ မြန်မာဗန်းစကားနှင့် မြန်မာစကားပုံ စိန်ခေါ်မှုများ။"
+  ],
+  [
+    "Source code · Burma Project Ideas ↗",
+    "မူရင်းကုဒ် · Burma Project Ideas ↗"
+  ]
+]

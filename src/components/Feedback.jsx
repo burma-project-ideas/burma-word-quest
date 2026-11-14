@@ -1,3 +1,4 @@
+import useLocale from '../useLocale'
 import { useEffect, useRef, useState } from 'react'
 import { supabase, onlineError } from '../supabase'
 
@@ -7,6 +8,7 @@ function feedbackError(error) {
   return onlineError(error)
 }
 export default function Feedback({ session, onSignIn }) {
+  const { ui } = useLocale()
   const [message, setMessage] = useState('')
   const [kind, setKind] = useState('suggestion')
   const [status, setStatus] = useState('loading')
@@ -59,13 +61,13 @@ export default function Feedback({ session, onSignIn }) {
     } catch (error) { if (mounted.current) setNotice(feedbackError(error)) }
     finally { guard.current = false; if (mounted.current) setBusy(false) }
   }
-  if (!session) return <div className="feedback-content"><p>Feedback ပို့ဖို့ ကစားသူအဖြစ် ဝင်ပါ။ နာမည်တစ်ခုပဲထည့်ခြင်း၊ Google သို့မဟုတ် email account နဲ့ ဝင်နိုင်ပါတယ်။</p><button className="next-game" onClick={onSignIn}>နာမည်နဲ့ ဝင်မယ်</button></div>
-  return <div className="feedback-content"><p>ကစားသူတစ်ယောက်ကို တစ်နေ့ feedback တစ်ခု ပို့နိုင်ပါတယ်။ မြန်မာအချိန် ည ၁၂ နာရီမှာ နေ့အသစ်စပါမယ်။</p>
-    {status === 'loading' ? <p role="status">ဒီနေ့ ပို့ထားခြင်း ရှိမရှိ စစ်နေပါတယ်…</p> : status === 'error' ? <div><p role="status">{notice}</p><button onClick={() => { setStatus('loading'); setRetry(value => value + 1) }}>ပြန်စစ်မယ်</button></div> : status === 'submitted' ? <p role="status">{notice || 'ဒီနေ့ feedback ပို့ပြီးသားပါ။ နောက်နေ့မှ ထပ်ပို့နိုင်ပါတယ်။'}</p> : <form onSubmit={submit}>
-      <label htmlFor="feedback-kind">Feedback အမျိုးအစား</label><select id="feedback-kind" value={kind} onChange={event => setKind(event.target.value)} disabled={busy}><option value="suggestion">အကြံပြုချက်</option><option value="bug">အမှားတွေ့ရှိမှု</option><option value="other">အခြား</option></select>
-      <label htmlFor="feedback-message">သင့်အကြံပြုချက်</label><textarea id="feedback-message" value={message} onChange={event => setMessage(event.target.value)} minLength={10} maxLength={2000} required rows={6} disabled={busy} placeholder="ပြင်စေချင်တာ၊ အမှားတွေ့တာကို ရေးပေးပါ…" aria-describedby="feedback-count" />
-      <small id="feedback-count">{[...message.trim()].length} / 2000 · အနည်းဆုံး ၁၀ လုံး</small><button className="next-game" disabled={busy || [...message.trim()].length < 10}>{busy ? 'ပို့နေပါတယ်…' : 'Feedback ပို့မယ်'}</button><p role="status">{notice}</p>
+  if (!session) return <div className="feedback-content"><p>{ui("Feedback ပို့ဖို့ ကစားသူအဖြစ် ဝင်ပါ။ နာမည်တစ်ခုပဲထည့်ခြင်း၊ Google သို့မဟုတ် email account နဲ့ ဝင်နိုင်ပါတယ်။")}</p><button className="next-game" onClick={onSignIn}>{ui("နာမည်နဲ့ ဝင်မယ်")}</button></div>
+  return <div className="feedback-content"><p>{ui("ကစားသူတစ်ယောက်ကို တစ်နေ့ feedback တစ်ခု ပို့နိုင်ပါတယ်။ မြန်မာအချိန် ည ၁၂ နာရီမှာ နေ့အသစ်စပါမယ်။")}</p>
+    {status === 'loading' ? <p role="status">{ui("ဒီနေ့ ပို့ထားခြင်း ရှိမရှိ စစ်နေပါတယ်…")}</p> : status === 'error' ? <div><p role="status">{ui(notice)}</p><button onClick={() => { setStatus('loading'); setRetry(value => value + 1) }}>{ui("ပြန်စစ်မယ်")}</button></div> : status === 'submitted' ? <p role="status">{ui(notice || 'ဒီနေ့ feedback ပို့ပြီးသားပါ။ နောက်နေ့မှ ထပ်ပို့နိုင်ပါတယ်။')}</p> : <form onSubmit={submit}>
+      <label htmlFor="feedback-kind">{ui("Feedback အမျိုးအစား")}</label><select id="feedback-kind" value={kind} onChange={event => setKind(event.target.value)} disabled={busy}><option value="suggestion">{ui("အကြံပြုချက်")}</option><option value="bug">{ui("အမှားတွေ့ရှိမှု")}</option><option value="other">{ui("အခြား")}</option></select>
+      <label htmlFor="feedback-message">{ui("သင့်အကြံပြုချက်")}</label><textarea id="feedback-message" value={message} onChange={event => setMessage(event.target.value)} minLength={10} maxLength={2000} required rows={6} disabled={busy} placeholder={ui("ပြင်စေချင်တာ၊ အမှားတွေ့တာကို ရေးပေးပါ…")} aria-describedby="feedback-count" />
+      <small id="feedback-count">{[...message.trim()].length}{ui(" / 2000 · အနည်းဆုံး ၁၀ လုံး")}</small><button className="next-game" disabled={busy || [...message.trim()].length < 10}>{ui(busy ? 'ပို့နေပါတယ်…' : 'Feedback ပို့မယ်')}</button><p role="status">{ui(notice)}</p>
     </form>}
-    <p className="ranking-note">Feedback ကို developer ပဲ ဖတ်နိုင်ပါတယ်။ Public leaderboard မှာ မပြပါဘူး။ <a href="/privacy.html" target="_blank" rel="noreferrer">Privacy Policy</a></p>
+    <p className="ranking-note">{ui("Feedback ကို developer ပဲ ဖတ်နိုင်ပါတယ်။ Public leaderboard မှာ မပြပါဘူး။ ")}<a href="/privacy.html" target="_blank" rel="noreferrer">{ui("Privacy Policy")}</a></p>
   </div>
 }
